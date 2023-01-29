@@ -1,0 +1,24 @@
+package main.java.com.bilalkose.cleancode.ch11_systems.c01.abstractfactory;
+
+import main.java.com.bilalkose.cleancode.ch11_systems.c01.abstractfactory.buttons.Button;
+import main.java.com.bilalkose.cleancode.ch11_systems.c01.abstractfactory.checkboxes.Checkbox;
+import main.java.com.bilalkose.cleancode.ch11_systems.c01.abstractfactory.factories.GUIFactory;
+
+/**
+ * Factory users don't care which concrete factory they use since they work with
+ * factories and products through abstract interfaces.
+ */
+public class Application {
+    private Button button;
+    private Checkbox checkbox;
+
+    public Application(GUIFactory factory) {
+        button = factory.createButton();
+        checkbox = factory.createCheckbox();
+    }
+
+    public void paint() {
+        button.paint();
+        checkbox.paint();
+    }
+}

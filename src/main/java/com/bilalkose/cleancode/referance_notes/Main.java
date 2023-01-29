@@ -6,4 +6,7 @@ public class Main {
     //Exceptions
     //Optinal
     //Override equlas and hashCode
+    //Reflection
+
+    //AOP
 }
